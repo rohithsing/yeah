@@ -1,0 +1,269 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if current_user.is_authenticated %}
+    <div class="welcome-banner bg-light py-2 mb-4">
+        <div class="container">
+            <p class="mb-0">Welcome back, {{ current_user.username }}! 👋</p>
+        </div>
+    </div>
+{% endif %}
+
+<!-- Hero Section -->
+<div class="hero-section mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">Discover Your Style</h1>
+                <p class="lead">Explore our latest collection of trendy dresses for every occasion.</p>
+                <div class="d-flex gap-3">
+                    <a href="#new-arrivals" class="btn btn-primary btn-lg">New Arrivals</a>
+                    <a href="#categories" class="btn btn-outline-dark btn-lg">Shop Categories</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/600x400" alt="Fashion Banner" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Dress Categories -->
+<div id="categories" class="container mb-5">
+    <h2 class="text-center mb-4">Shop by Category</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card category-card">
+                <img src="https://via.placeholder.com/400x500" class="card-img-top" alt="Party Wear">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Party Wear</h5>
+                    <p class="card-text">Stunning dresses for special occasions</p>
+                    <a href="#party-wear" class="btn btn-outline-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card category-card">
+                <img src="https://via.placeholder.com/400x500" class="card-img-top" alt="Casual Wear">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Casual Wear</h5>
+                    <p class="card-text">Comfortable and stylish everyday dresses</p>
+                    <a href="#casual-wear" class="btn btn-outline-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card category-card">
+                <img src="https://via.placeholder.com/400x500" class="card-img-top" alt="Ethnic Wear">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ethnic Wear</h5>
+                    <p class="card-text">Traditional and fusion dresses</p>
+                    <a href="#ethnic-wear" class="btn btn-outline-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Arrivals -->
+<div id="new-arrivals" class="container mb-5">
+    <h2 class="text-center mb-4">New Arrivals</h2>
+    <div class="row g-4">
+        <!-- Dress 1 -->
+        <div class="col-md-3">
+            <div class="card product-card h-100">
+                <div class="badge bg-danger position-absolute top-0 end-0 m-2">New</div>
+                <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Floral Maxi Dress">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Floral Maxi Dress</h5>
+                    <p class="card-text text-muted">Beautiful floral print maxi dress perfect for summer</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-muted text-decoration-line-through">$89.99</span>
+                            <span class="ms-2 text-danger fw-bold">$69.99</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dress 2 -->
+        <div class="col-md-3">
+            <div class="card product-card h-100">
+                <div class="badge bg-danger position-absolute top-0 end-0 m-2">New</div>
+                <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Cocktail Dress">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Elegant Cocktail Dress</h5>
+                    <p class="card-text text-muted">Sophisticated black cocktail dress for evening events</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-muted text-decoration-line-through">$129.99</span>
+                            <span class="ms-2 text-danger fw-bold">$99.99</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dress 3 -->
+        <div class="col-md-3">
+            <div class="card product-card h-100">
+                <div class="badge bg-danger position-absolute top-0 end-0 m-2">New</div>
+                <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Summer Dress">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Casual Summer Dress</h5>
+                    <p class="card-text text-muted">Light and breezy summer dress with floral pattern</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-muted text-decoration-line-through">$59.99</span>
+                            <span class="ms-2 text-danger fw-bold">$44.99</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dress 4 -->
+        <div class="col-md-3">
+            <div class="card product-card h-100">
+                <div class="badge bg-danger position-absolute top-0 end-0 m-2">New</div>
+                <img src="https://via.placeholder.com/300x400" class="card-img-top" alt="Evening Gown">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Elegant Evening Gown</h5>
+                    <p class="card-text text-muted">Stunning evening gown with sequin details</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <div>
+                            <span class="text-muted text-decoration-line-through">$199.99</span>
+                            <span class="ms-2 text-danger fw-bold">$159.99</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Collection -->
+<div class="container-fluid bg-light py-5 mb-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Featured Collection</h2>
+        <div class="row g-4">
+            <!-- Featured Dress 1 -->
+            <div class="col-md-6">
+                <div class="card border-0 bg-transparent">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/400x500" class="img-fluid rounded" alt="Designer Dress">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h3 class="card-title">Designer Evening Wear</h3>
+                                <p class="card-text">Exclusive collection of designer evening dresses perfect for special occasions.</p>
+                                <a href="#" class="btn btn-dark">Explore Collection</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Featured Dress 2 -->
+            <div class="col-md-6">
+                <div class="card border-0 bg-transparent">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/400x500" class="img-fluid rounded" alt="Summer Collection">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h3 class="card-title">Summer Collection</h3>
+                                <p class="card-text">Light and comfortable summer dresses for your vacation wardrobe.</p>
+                                <a href="#" class="btn btn-dark">View Collection</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Newsletter Section -->
+<div class="container mb-5">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-8">
+            <h3>Stay Updated</h3>
+            <p class="text-muted">Subscribe to our newsletter for the latest trends and exclusive offers!</p>
+            <form class="row g-3 justify-content-center">
+                <div class="col-auto">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-dark">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-section {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .category-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    
+    .category-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+    
+    .product-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+    
+    .btn-outline-primary {
+        border-width: 2px;
+    }
+    
+    .btn-outline-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 10px rgba(0,123,255,0.2);
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add to cart animation
+    document.querySelectorAll('.btn-outline-primary').forEach(button => {
+        button.addEventListener('click', function(e) {
+            if (this.querySelector('.bi-cart-plus')) {
+                e.preventDefault();
+                this.innerHTML = '<i class="bi bi-check2"></i>';
+                setTimeout(() => {
+                    this.innerHTML = '<i class="bi bi-cart-plus"></i>';
+                }, 1500);
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
